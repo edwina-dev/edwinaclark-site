@@ -3,34 +3,29 @@ import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 
-const featuredOutlets = [
-  'SELF', 'Women\'s Health', 'Shape', 'Teen Vogue', 'Glamour',
-  'Condé Nast Traveler', 'Food Network', 'Yahoo Life', 'Well+Good', 'MyFitnessPal'
+const clients = [
+  { name: 'Jona', desc: 'Microbiome health' },
+  { name: 'OTO Health', desc: 'Fertility wearable' },
+  { name: 'Elo Health', desc: 'Personalized nutrition' },
+  { name: 'Oshi Health', desc: 'GI digital health' },
+  { name: 'Rousselot', desc: 'Consumer collagen' },
+  { name: 'Yummly', desc: '25–30M weekly users' },
 ];
 
-const writingHighlights = [
-  {
-    title: 'What a Dietitian Actually Eats in a Day',
-    outlet: 'Shape',
-    category: 'Nutrition',
-    description: 'An honest look at intuitive eating from a registered dietitian\'s perspective.',
-  },
-  {
-    title: 'The Science Behind Gut Health Claims',
-    outlet: 'Well+Good',
-    category: 'Gut Health',
-    description: 'Separating evidence-based gut health strategies from social media hype.',
-  },
-  {
-    title: 'Sports Nutrition Myths That Won\'t Die',
-    outlet: 'SELF',
-    category: 'Sports Nutrition',
-    description: 'Debunking persistent sports nutrition misconceptions with current research.',
-  },
+const mediaOutlets = [
+  'SELF', 'Women\'s Health', 'Shape', 'Teen Vogue', 'Glamour',
+  'Condé Nast Traveler', 'Food Network', 'Yahoo Life', 'Well+Good'
+];
+
+const results = [
+  { metric: '0 → 160K', label: 'Monthly organic sessions built at Elo Health' },
+  { metric: '50K', label: 'Newsletter subscribers grown from scratch' },
+  { metric: '120+', label: 'Media features as expert source' },
+  { metric: '50+', label: 'SEO pages for Rousselot collagen platform' },
 ];
 ---
 
-<Layout title="Edwina Clark — Health & Nutrition Writer, Media Expert, RD">
+<Layout title="Edwina Clark — Fractional CMO, Health Writer, & Media Expert">
   <Nav />
 
   <!-- Hero -->
@@ -38,17 +33,17 @@ const writingHighlights = [
     <div class="max-w-6xl mx-auto px-6">
       <div class="grid md:grid-cols-2 gap-12 items-center">
         <div>
-          <p class="text-sm uppercase tracking-widest text-sage mb-4">Writer &middot; Media Expert &middot; Registered Dietitian</p>
+          <p class="text-sm uppercase tracking-widest text-sage mb-4">Fractional CMO &middot; Health Writer &middot; Media Expert</p>
           <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-            Making health<br />
-            <span class="italic text-sage">make sense.</span>
+            Where nutrition science<br />
+            <span class="italic text-sage">meets marketing.</span>
           </h1>
           <p class="text-lg text-charcoal-light leading-relaxed mb-8 max-w-lg">
-            I'm Edwina Clark — a registered dietitian and health writer who translates complex nutrition science into clear, compelling stories for top-tier publications and brands.
+            I'm Edwina Clark — a registered dietitian turned fractional CMO who helps digital health and wellness brands grow through science-backed content, strategy, and storytelling.
           </p>
           <div class="flex flex-wrap gap-4">
-            <a href="/writing" class="inline-block bg-sage text-white px-6 py-3 text-sm font-medium uppercase tracking-wide hover:bg-sage-dark transition-colors">
-              Read My Work
+            <a href="/services" class="inline-block bg-sage text-white px-6 py-3 text-sm font-medium uppercase tracking-wide hover:bg-sage-dark transition-colors">
+              How I Can Help
             </a>
             <a href="/contact" class="inline-block border border-charcoal text-charcoal px-6 py-3 text-sm font-medium uppercase tracking-wide hover:bg-charcoal hover:text-white transition-colors">
               Get in Touch
@@ -57,7 +52,7 @@ const writingHighlights = [
         </div>
         <div class="relative">
           <div class="aspect-[3/4] bg-warm-gray rounded-sm overflow-hidden">
-            <img src="/images/headshot-hero.jpeg" alt="Edwina Clark, registered dietitian and health writer" class="w-full h-full object-cover" />
+            <img src="/images/headshot-hero.jpeg" alt="Edwina Clark, fractional CMO and registered dietitian" class="w-full h-full object-cover" />
           </div>
           <div class="absolute -bottom-4 -left-4 w-24 h-24 bg-blush -z-10 rounded-sm"></div>
         </div>
@@ -65,90 +60,102 @@ const writingHighlights = [
     </div>
   </section>
 
-  <!-- Featured In -->
-  <section class="py-16 bg-sage-lighter">
+  <!-- Two Sides -->
+  <section class="py-20 bg-sage-lighter">
     <div class="max-w-6xl mx-auto px-6">
-      <p class="text-center text-sm uppercase tracking-widest text-charcoal-light mb-10">Featured in 120+ Publications</p>
-      <div class="flex flex-wrap justify-center gap-x-10 gap-y-4">
-        {featuredOutlets.map(outlet => (
-          <span class="font-display text-lg md:text-xl text-charcoal/60 italic">{outlet}</span>
-        ))}
+      <p class="text-center text-sm uppercase tracking-widest text-charcoal-light mb-12">A rare combination</p>
+      <div class="grid md:grid-cols-2 gap-12">
+        <div class="bg-white p-8 md:p-10 rounded-sm">
+          <p class="text-sm uppercase tracking-widest text-sage mb-3">Marketing Leader</p>
+          <h2 class="font-display text-2xl font-semibold mb-4">Fractional CMO for digital health</h2>
+          <p class="text-charcoal-light leading-relaxed mb-6">
+            I build marketing engines for health, nutrition, and wellness startups — from brand positioning and SEO strategy to content programs that drive measurable growth.
+          </p>
+          <a href="/services" class="text-sm uppercase tracking-wide text-sage hover:text-sage-dark transition-colors">
+            View Services &rarr;
+          </a>
+        </div>
+        <div class="bg-white p-8 md:p-10 rounded-sm">
+          <p class="text-sm uppercase tracking-widest text-sage mb-3">Nutrition Expert</p>
+          <h2 class="font-display text-2xl font-semibold mb-4">Writer & media spokesperson</h2>
+          <p class="text-charcoal-light leading-relaxed mb-6">
+            I translate complex nutrition science into clear, compelling stories — as a bylined writer for top publications and a trusted expert source for national media.
+          </p>
+          <a href="/writing-media" class="text-sm uppercase tracking-wide text-sage hover:text-sage-dark transition-colors">
+            View Work &rarr;
+          </a>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Recent Writing -->
+  <!-- Results -->
   <section class="py-20 md:py-28">
     <div class="max-w-6xl mx-auto px-6">
-      <div class="flex items-end justify-between mb-12">
-        <div>
-          <p class="text-sm uppercase tracking-widest text-sage mb-2">Writing</p>
-          <h2 class="font-display text-3xl md:text-4xl font-semibold">Recent Work</h2>
-        </div>
-        <a href="/writing" class="hidden md:inline-block text-sm uppercase tracking-wide text-charcoal-light hover:text-sage transition-colors">
-          View All &rarr;
-        </a>
+      <div class="text-center mb-14">
+        <p class="text-sm uppercase tracking-widest text-sage mb-2">Results</p>
+        <h2 class="font-display text-3xl md:text-4xl font-semibold">The numbers speak</h2>
       </div>
-
-      <div class="grid md:grid-cols-3 gap-8">
-        {writingHighlights.map(article => (
-          <article class="group">
-            <div class="aspect-[4/3] bg-peach/50 mb-5 rounded-sm overflow-hidden">
-              <div class="w-full h-full flex items-center justify-center text-charcoal-light/30">
-                <p class="text-sm">Article image</p>
-              </div>
-            </div>
-            <span class="text-xs uppercase tracking-widest text-sage">{article.outlet} &middot; {article.category}</span>
-            <h3 class="font-display text-xl font-semibold mt-2 mb-2 group-hover:text-sage transition-colors">{article.title}</h3>
-            <p class="text-sm text-charcoal-light leading-relaxed">{article.description}</p>
-          </article>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        {results.map(r => (
+          <div class="text-center">
+            <p class="font-display text-3xl md:text-4xl font-bold text-sage">{r.metric}</p>
+            <p class="text-sm text-charcoal-light mt-2 leading-relaxed">{r.label}</p>
+          </div>
         ))}
-      </div>
-
-      <div class="mt-10 text-center md:hidden">
-        <a href="/writing" class="text-sm uppercase tracking-wide text-sage">View All Writing &rarr;</a>
       </div>
     </div>
   </section>
 
-  <!-- Media / Expert Commentary -->
-  <section class="py-20 md:py-28 bg-charcoal text-white">
+  <!-- Clients -->
+  <section class="py-20 bg-charcoal text-white">
     <div class="max-w-6xl mx-auto px-6">
       <div class="grid md:grid-cols-2 gap-16 items-center">
         <div>
-          <p class="text-sm uppercase tracking-widest text-sage-light mb-2">Media</p>
-          <h2 class="font-display text-3xl md:text-4xl font-semibold mb-6">Expert Source & Spokesperson</h2>
-          <p class="text-white/70 leading-relaxed mb-6">
-            Journalists and editors trust me to deliver clear, evidence-based nutrition commentary on deadline. I've been quoted as an expert in over 120 articles across major national publications.
+          <p class="text-sm uppercase tracking-widest text-sage-light mb-2">Clients & Brands</p>
+          <h2 class="font-display text-3xl md:text-4xl font-semibold mb-6">Trusted by leading health & wellness companies</h2>
+          <p class="text-white/70 leading-relaxed mb-8">
+            From early-stage startups to established consumer brands, I've helped companies find their voice, build their audience, and grow sustainably. Previously Director of Marketing at Elo Health and Head of Nutrition at Yummly.
           </p>
-          <ul class="space-y-3 text-white/70 text-sm mb-8">
-            <li class="flex items-start gap-3">
-              <span class="text-sage-light mt-0.5">&#10003;</span>
-              Nutrition, gut health, sports nutrition, fertility, supplements
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="text-sage-light mt-0.5">&#10003;</span>
-              Fast turnaround — used to newsroom timelines
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="text-sage-light mt-0.5">&#10003;</span>
-              Available for print, digital, broadcast, and podcast
-            </li>
-          </ul>
-          <a href="/media" class="inline-block border border-sage-light text-sage-light px-6 py-3 text-sm font-medium uppercase tracking-wide hover:bg-sage-light hover:text-charcoal transition-colors">
-            View Media Features
+          <a href="/services" class="inline-block border border-sage-light text-sage-light px-6 py-3 text-sm font-medium uppercase tracking-wide hover:bg-sage-light hover:text-charcoal transition-colors">
+            View Services
           </a>
         </div>
         <div class="grid grid-cols-2 gap-4">
-          <div class="col-span-2 aspect-[4/3] rounded-sm overflow-hidden">
+          {clients.map(client => (
+            <div class="bg-white/5 rounded-sm p-6 flex flex-col justify-center">
+              <p class="font-display text-lg text-white">{client.name}</p>
+              <p class="text-white/40 text-sm mt-1">{client.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Media -->
+  <section class="py-20 md:py-28">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+        <div>
+          <div class="aspect-[4/3] rounded-sm overflow-hidden">
             <img src="/images/headshot-food.jpeg" alt="Edwina Clark preparing food in the kitchen" class="w-full h-full object-cover" />
           </div>
-          <div class="aspect-square bg-white/5 rounded-sm flex items-center justify-center">
-            <span class="font-display text-2xl italic text-white/20">SELF</span>
+        </div>
+        <div>
+          <p class="text-sm uppercase tracking-widest text-sage mb-2">Media & Writing</p>
+          <h2 class="font-display text-3xl md:text-4xl font-semibold mb-6">Expert source for national media</h2>
+          <p class="text-charcoal-light leading-relaxed mb-6">
+            Journalists and editors trust me to deliver clear, evidence-based nutrition commentary on deadline. I've been quoted in 120+ articles and write for top health publications.
+          </p>
+          <div class="flex flex-wrap gap-x-6 gap-y-2 mb-8">
+            {mediaOutlets.map(outlet => (
+              <span class="font-display text-base italic text-charcoal/50">{outlet}</span>
+            ))}
           </div>
-          <div class="aspect-square bg-white/5 rounded-sm flex items-center justify-center">
-            <span class="font-display text-2xl italic text-white/20">Shape</span>
-          </div>
+          <a href="/writing-media" class="text-sm uppercase tracking-wide text-sage hover:text-sage-dark transition-colors">
+            View Writing & Media &rarr;
+          </a>
         </div>
       </div>
     </div>
@@ -157,12 +164,12 @@ const writingHighlights = [
   <!-- CTA -->
   <section class="py-20 md:py-28 bg-blush-light">
     <div class="max-w-3xl mx-auto px-6 text-center">
-      <h2 class="font-display text-3xl md:text-4xl font-semibold mb-4">Need a nutrition expert?</h2>
+      <h2 class="font-display text-3xl md:text-4xl font-semibold mb-4">Let's grow your brand</h2>
       <p class="text-charcoal-light leading-relaxed mb-8 max-w-xl mx-auto">
-        Whether you're looking for a writer, a source for your next story, or a speaker for your event — I'd love to hear from you.
+        Whether you need a fractional CMO, a health writer, or an expert source — I bring the rare combination of clinical nutrition credentials and marketing leadership.
       </p>
       <a href="/contact" class="inline-block bg-sage text-white px-8 py-4 text-sm font-medium uppercase tracking-wide hover:bg-sage-dark transition-colors">
-        Let's Work Together
+        Start a Conversation
       </a>
     </div>
   </section>
