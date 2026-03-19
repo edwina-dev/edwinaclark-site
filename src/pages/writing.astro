@@ -77,7 +77,7 @@ const articles = [
 
   <section class="pt-32 pb-12 md:pt-44 md:pb-16">
     <div class="max-w-6xl mx-auto px-6">
-      <p class="text-sm uppercase tracking-widest text-coral mb-2">Portfolio</p>
+      <p class="text-sm uppercase tracking-widest text-sage mb-2">Portfolio</p>
       <h1 class="font-display text-4xl md:text-5xl font-bold mb-4">Writing</h1>
       <p class="text-lg text-charcoal-light max-w-2xl leading-relaxed">
         Bylined articles and expert content across nutrition, gut health, sports nutrition, fertility, and wellness — published in Shape, SELF, Well+Good, Yahoo Life, Women's Health, and more.
@@ -94,7 +94,7 @@ const articles = [
             data-filter={cat.toLowerCase().replace(' ', '-')}
             class:list={[
               'text-sm tracking-wide uppercase whitespace-nowrap pb-2 border-b-2 transition-colors filter-btn',
-              i === 0 ? 'border-coral text-coral' : 'border-transparent text-charcoal-light hover:text-coral'
+              i === 0 ? 'border-sage text-sage' : 'border-transparent text-charcoal-light hover:text-sage'
             ]}
           >
             {cat}
@@ -110,13 +110,13 @@ const articles = [
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="articles-grid">
         {articles.map(article => (
           <a href={article.url} class="group article-card block" data-category={article.category.toLowerCase().replace(' ', '-')}>
-            <div class="aspect-[4/3] bg-warm-gray mb-4 rounded-sm overflow-hidden">
+            <div class="aspect-[4/3] bg-peach/50 mb-4 rounded-sm overflow-hidden">
               <div class="w-full h-full flex items-center justify-center text-charcoal-light/30">
                 <p class="text-sm">Article image</p>
               </div>
             </div>
-            <span class="text-xs uppercase tracking-widest text-coral">{article.outlet} &middot; {article.category}</span>
-            <h2 class="font-display text-xl font-semibold mt-2 mb-2 group-hover:text-coral transition-colors">{article.title}</h2>
+            <span class="text-xs uppercase tracking-widest text-sage">{article.outlet} &middot; {article.category}</span>
+            <h2 class="font-display text-xl font-semibold mt-2 mb-2 group-hover:text-sage transition-colors">{article.title}</h2>
             <p class="text-sm text-charcoal-light leading-relaxed">{article.description}</p>
           </a>
         ))}
@@ -125,13 +125,13 @@ const articles = [
   </section>
 
   <!-- Writing CTA -->
-  <section class="py-20 bg-warm-gray">
+  <section class="py-20 bg-sage-lighter">
     <div class="max-w-3xl mx-auto px-6 text-center">
       <h2 class="font-display text-2xl md:text-3xl font-semibold mb-4">Looking for a health & nutrition writer?</h2>
       <p class="text-charcoal-light leading-relaxed mb-8">
         I write evidence-based health and nutrition content for publications, brands, and digital health companies. Let's talk about your next project.
       </p>
-      <a href="/contact" class="inline-block bg-coral text-white px-8 py-4 text-sm font-medium uppercase tracking-wide hover:bg-coral-dark transition-colors">
+      <a href="/contact" class="inline-block bg-sage text-white px-8 py-4 text-sm font-medium uppercase tracking-wide hover:bg-sage-dark transition-colors">
         Hire Me to Write
       </a>
     </div>
@@ -149,10 +149,10 @@ const articles = [
       const filter = btn.getAttribute('data-filter');
 
       buttons.forEach(b => {
-        b.classList.remove('border-coral', 'text-coral');
+        b.classList.remove('border-sage', 'text-sage');
         b.classList.add('border-transparent', 'text-charcoal-light');
       });
-      btn.classList.add('border-coral', 'text-coral');
+      btn.classList.add('border-sage', 'text-sage');
       btn.classList.remove('border-transparent', 'text-charcoal-light');
 
       cards.forEach(card => {

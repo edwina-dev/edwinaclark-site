@@ -11,8 +11,8 @@ const links = [
 
 <nav class="fixed top-0 w-full bg-cream/90 backdrop-blur-sm z-50 border-b border-warm-gray-dark/50">
   <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-    <a href="/" class="font-display text-xl font-semibold text-charcoal hover:text-coral transition-colors">
-      Edwina Clark
+    <a href="/" class="block">
+      <img src="/images/logo.png" alt="Edwina Clark — Science-Driven Wellness" class="h-12 w-auto" />
     </a>
 
     <!-- Mobile menu button -->
@@ -29,7 +29,7 @@ const links = [
           href={link.href}
           class:list={[
             'text-sm tracking-wide uppercase transition-colors',
-            currentPath === link.href ? 'text-coral font-medium' : 'text-charcoal-light hover:text-coral'
+            currentPath === link.href ? 'text-sage font-medium' : 'text-charcoal-light hover:text-sage'
           ]}
         >
           {link.label}
@@ -46,7 +46,7 @@ const links = [
           href={link.href}
           class:list={[
             'text-sm tracking-wide uppercase transition-colors',
-            currentPath === link.href ? 'text-coral font-medium' : 'text-charcoal-light hover:text-coral'
+            currentPath === link.href ? 'text-sage font-medium' : 'text-charcoal-light hover:text-sage'
           ]}
         >
           {link.label}
