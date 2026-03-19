@@ -1,0 +1,84 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="About — Edwina Clark">
+  <Nav />
+
+  <section class="pt-32 pb-20 md:pt-44 md:pb-28">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-16 items-start">
+        <!-- Photo -->
+        <div>
+          <div class="aspect-[3/4] bg-warm-gray rounded-sm overflow-hidden sticky top-28">
+            <div class="w-full h-full flex items-center justify-center text-charcoal-light/40">
+              <div class="text-center">
+                <svg class="w-16 h-16 mx-auto mb-3 opacity-30" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                <p class="text-sm">Your photo here</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bio -->
+        <div>
+          <p class="text-sm uppercase tracking-widest text-coral mb-2">About</p>
+          <h1 class="font-display text-4xl md:text-5xl font-bold mb-8">Edwina Clark</h1>
+
+          <div class="prose prose-lg text-charcoal-light space-y-5 leading-relaxed">
+            <p>
+              I'm a registered dietitian, health writer, and media expert who has spent over a decade helping people understand nutrition through clear, evidence-based storytelling.
+            </p>
+            <p>
+              My writing has appeared in <strong class="text-charcoal">Shape, SELF, Women's Health, Well+Good, Yahoo Life, MyFitnessPal</strong>, and dozens of other publications. As an expert source, I've been quoted in over 120 articles across outlets including <strong class="text-charcoal">Teen Vogue, Glamour, Condé Nast Traveler</strong>, and <strong class="text-charcoal">Food Network</strong>.
+            </p>
+            <p>
+              My clinical background spans performance nutrition (at EXOS, working with Google, Intel, Tesla, and Adidas), consumer health technology (as Head of Nutrition at Yummly, reaching 25–30 million weekly users), and digital health marketing. This gives me a unique lens: I understand both the science and how to communicate it in ways that resonate with real people.
+            </p>
+            <p>
+              I hold a Master of Science and Bachelor of Science in Nutrition from Boston University (summa cum laude), and I'm a Certified Specialist in Sports Dietetics (CSSD). I'm also an Accredited Practicing Dietitian in Australia.
+            </p>
+            <p>
+              When I'm not writing or on a media call, you'll find me based in Alexandria, Virginia.
+            </p>
+          </div>
+
+          <!-- Credentials -->
+          <div class="mt-12 pt-8 border-t border-warm-gray-dark">
+            <h2 class="text-sm uppercase tracking-widest text-charcoal mb-6 font-medium">Credentials</h2>
+            <div class="grid grid-cols-2 gap-6">
+              <div>
+                <p class="text-sm font-medium text-charcoal">Education</p>
+                <p class="text-sm text-charcoal-light mt-1">MS & BS Nutrition, Boston University (summa cum laude)</p>
+              </div>
+              <div>
+                <p class="text-sm font-medium text-charcoal">Certifications</p>
+                <p class="text-sm text-charcoal-light mt-1">RD, CSSD, Accredited Practicing Dietitian (Australia)</p>
+              </div>
+              <div>
+                <p class="text-sm font-medium text-charcoal">Specialties</p>
+                <p class="text-sm text-charcoal-light mt-1">Nutrition, gut health, sports nutrition, fertility, supplements</p>
+              </div>
+              <div>
+                <p class="text-sm font-medium text-charcoal">Based in</p>
+                <p class="text-sm text-charcoal-light mt-1">Alexandria, Virginia</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Notable Brands -->
+          <div class="mt-12 pt-8 border-t border-warm-gray-dark">
+            <h2 class="text-sm uppercase tracking-widest text-charcoal mb-4 font-medium">Brands I've Worked With</h2>
+            <p class="text-sm text-charcoal-light leading-relaxed">
+              Google, Intel, Tesla, Adidas, Oatly, Primal Kitchen, Whirlpool, US Fertility, Jona, OTO Health, Elo Health, Oshi Health, Rousselot
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

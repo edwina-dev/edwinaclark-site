@@ -1,0 +1,179 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+
+const featuredOutlets = [
+  'SELF', 'Women\'s Health', 'Shape', 'Teen Vogue', 'Glamour',
+  'Condé Nast Traveler', 'Food Network', 'Yahoo Life', 'Well+Good', 'MyFitnessPal'
+];
+
+const writingHighlights = [
+  {
+    title: 'What a Dietitian Actually Eats in a Day',
+    outlet: 'Shape',
+    category: 'Nutrition',
+    description: 'An honest look at intuitive eating from a registered dietitian\'s perspective.',
+  },
+  {
+    title: 'The Science Behind Gut Health Claims',
+    outlet: 'Well+Good',
+    category: 'Gut Health',
+    description: 'Separating evidence-based gut health strategies from social media hype.',
+  },
+  {
+    title: 'Sports Nutrition Myths That Won\'t Die',
+    outlet: 'SELF',
+    category: 'Sports Nutrition',
+    description: 'Debunking persistent sports nutrition misconceptions with current research.',
+  },
+];
+---
+
+<Layout title="Edwina Clark — Health & Nutrition Writer, Media Expert, RD">
+  <Nav />
+
+  <!-- Hero -->
+  <section class="pt-32 pb-20 md:pt-44 md:pb-32">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="text-sm uppercase tracking-widest text-coral mb-4">Writer &middot; Media Expert &middot; Registered Dietitian</p>
+          <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+            Making health<br />
+            <span class="italic text-coral">make sense.</span>
+          </h1>
+          <p class="text-lg text-charcoal-light leading-relaxed mb-8 max-w-lg">
+            I'm Edwina Clark — a registered dietitian and health writer who translates complex nutrition science into clear, compelling stories for top-tier publications and brands.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="/writing" class="inline-block bg-coral text-white px-6 py-3 text-sm font-medium uppercase tracking-wide hover:bg-coral-dark transition-colors">
+              Read My Work
+            </a>
+            <a href="/contact" class="inline-block border border-charcoal text-charcoal px-6 py-3 text-sm font-medium uppercase tracking-wide hover:bg-charcoal hover:text-white transition-colors">
+              Get in Touch
+            </a>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="aspect-[3/4] bg-warm-gray rounded-sm overflow-hidden">
+            <div class="w-full h-full flex items-center justify-center text-charcoal-light/40">
+              <div class="text-center">
+                <svg class="w-16 h-16 mx-auto mb-3 opacity-30" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                <p class="text-sm">Your headshot here</p>
+              </div>
+            </div>
+          </div>
+          <div class="absolute -bottom-4 -left-4 w-24 h-24 bg-coral/10 -z-10 rounded-sm"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured In -->
+  <section class="py-16 bg-warm-gray">
+    <div class="max-w-6xl mx-auto px-6">
+      <p class="text-center text-sm uppercase tracking-widest text-charcoal-light mb-10">Featured in 120+ Publications</p>
+      <div class="flex flex-wrap justify-center gap-x-10 gap-y-4">
+        {featuredOutlets.map(outlet => (
+          <span class="font-display text-lg md:text-xl text-charcoal/60 italic">{outlet}</span>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Recent Writing -->
+  <section class="py-20 md:py-28">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="flex items-end justify-between mb-12">
+        <div>
+          <p class="text-sm uppercase tracking-widest text-coral mb-2">Writing</p>
+          <h2 class="font-display text-3xl md:text-4xl font-semibold">Recent Work</h2>
+        </div>
+        <a href="/writing" class="hidden md:inline-block text-sm uppercase tracking-wide text-charcoal-light hover:text-coral transition-colors">
+          View All &rarr;
+        </a>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        {writingHighlights.map(article => (
+          <article class="group">
+            <div class="aspect-[4/3] bg-warm-gray mb-5 rounded-sm overflow-hidden">
+              <div class="w-full h-full flex items-center justify-center text-charcoal-light/30">
+                <p class="text-sm">Article image</p>
+              </div>
+            </div>
+            <span class="text-xs uppercase tracking-widest text-coral">{article.outlet} &middot; {article.category}</span>
+            <h3 class="font-display text-xl font-semibold mt-2 mb-2 group-hover:text-coral transition-colors">{article.title}</h3>
+            <p class="text-sm text-charcoal-light leading-relaxed">{article.description}</p>
+          </article>
+        ))}
+      </div>
+
+      <div class="mt-10 text-center md:hidden">
+        <a href="/writing" class="text-sm uppercase tracking-wide text-coral">View All Writing &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Media / Expert Commentary -->
+  <section class="py-20 md:py-28 bg-charcoal text-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+        <div>
+          <p class="text-sm uppercase tracking-widest text-coral mb-2">Media</p>
+          <h2 class="font-display text-3xl md:text-4xl font-semibold mb-6">Expert Source & Spokesperson</h2>
+          <p class="text-white/70 leading-relaxed mb-6">
+            Journalists and editors trust me to deliver clear, evidence-based nutrition commentary on deadline. I've been quoted as an expert in over 120 articles across major national publications.
+          </p>
+          <ul class="space-y-3 text-white/70 text-sm mb-8">
+            <li class="flex items-start gap-3">
+              <span class="text-coral mt-0.5">&#10003;</span>
+              Nutrition, gut health, sports nutrition, fertility, supplements
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-coral mt-0.5">&#10003;</span>
+              Fast turnaround — used to newsroom timelines
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-coral mt-0.5">&#10003;</span>
+              Available for print, digital, broadcast, and podcast
+            </li>
+          </ul>
+          <a href="/media" class="inline-block border border-coral text-coral px-6 py-3 text-sm font-medium uppercase tracking-wide hover:bg-coral hover:text-white transition-colors">
+            View Media Features
+          </a>
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="aspect-square bg-white/5 rounded-sm flex items-center justify-center">
+            <span class="font-display text-2xl italic text-white/20">SELF</span>
+          </div>
+          <div class="aspect-square bg-white/5 rounded-sm flex items-center justify-center">
+            <span class="font-display text-2xl italic text-white/20">Shape</span>
+          </div>
+          <div class="aspect-square bg-white/5 rounded-sm flex items-center justify-center">
+            <span class="font-display text-xl italic text-white/20">Women's Health</span>
+          </div>
+          <div class="aspect-square bg-white/5 rounded-sm flex items-center justify-center">
+            <span class="font-display text-xl italic text-white/20">Teen Vogue</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 md:py-28">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <h2 class="font-display text-3xl md:text-4xl font-semibold mb-4">Need a nutrition expert?</h2>
+      <p class="text-charcoal-light leading-relaxed mb-8 max-w-xl mx-auto">
+        Whether you're looking for a writer, a source for your next story, or a speaker for your event — I'd love to hear from you.
+      </p>
+      <a href="/contact" class="inline-block bg-coral text-white px-8 py-4 text-sm font-medium uppercase tracking-wide hover:bg-coral-dark transition-colors">
+        Let's Work Together
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
