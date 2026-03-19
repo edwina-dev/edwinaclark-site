@@ -2,86 +2,77 @@
 import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+
+const contactTypes = [
+  { icon: '01', title: 'Fractional CMO', subtitle: 'Marketing leadership for health brands', email: 'hello@edwinaclark.com' },
+  { icon: '02', title: 'Writing & Content', subtitle: 'Articles, SEO, educational content', email: 'hello@edwinaclark.com' },
+  { icon: '03', title: 'Media & Press', subtitle: 'Expert commentary on deadline', email: 'hello@edwinaclark.com' },
+  { icon: '04', title: 'Speaking', subtitle: 'Conferences, events, trade shows', email: 'hello@edwinaclark.com' },
+];
 ---
 
 <Layout title="Contact — Edwina Clark">
   <Nav />
 
-  <section class="pt-32 pb-20 md:pt-44 md:pb-28">
-    <div class="max-w-6xl mx-auto px-6">
+  <!-- Hero -->
+  <section class="pt-24 md:pt-32 bg-sage-lighter">
+    <div class="max-w-7xl mx-auto px-6 pt-16 pb-20 md:pt-24 md:pb-28">
+      <p class="text-xs uppercase tracking-[0.2em] text-sage mb-4">Contact</p>
+      <h1 class="font-display text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] mb-6 max-w-3xl">
+        Let's build<br /><em class="text-sage">something great.</em>
+      </h1>
+      <p class="text-xl text-charcoal-light max-w-xl leading-relaxed">
+        Tell me about your brand, your goals, and the challenge you're trying to solve. I'll get back to you within 1–2 business days.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Cards -->
+  <section class="py-24 md:py-32">
+    <div class="max-w-7xl mx-auto px-6">
       <div class="grid md:grid-cols-2 gap-16">
-        <!-- Info -->
+        <!-- Cards -->
         <div>
-          <p class="text-sm uppercase tracking-widest text-sage mb-2">Contact</p>
-          <h1 class="font-display text-4xl md:text-5xl font-bold mb-6">Let's connect.</h1>
-          <p class="text-lg text-charcoal-light leading-relaxed mb-10">
-            Whether you need a fractional CMO, a health writer, an expert source, or a speaker — I'd love to hear from you.
-          </p>
-
-          <div class="space-y-8">
-            <div>
-              <h2 class="text-sm uppercase tracking-widest font-medium text-charcoal mb-2">Fractional CMO & marketing</h2>
-              <p class="text-charcoal-light text-sm leading-relaxed">
-                Tell me about your company, stage, and the marketing challenge you're trying to solve. I typically work 2–4 days per week.
-              </p>
-            </div>
-            <div>
-              <h2 class="text-sm uppercase tracking-widest font-medium text-charcoal mb-2">Writing & content</h2>
-              <p class="text-charcoal-light text-sm leading-relaxed">
-                Share a brief overview of your project, target audience, and timeline. I'll get back to you within 1–2 business days.
-              </p>
-            </div>
-            <div>
-              <h2 class="text-sm uppercase tracking-widest font-medium text-charcoal mb-2">Media & speaking</h2>
-              <p class="text-charcoal-light text-sm leading-relaxed">
-                For media, include your outlet, topic, and deadline. For speaking, include event details, audience, and date.
-              </p>
-            </div>
+          <h2 class="font-display text-3xl font-bold mb-8">How can I help?</h2>
+          <div class="grid grid-cols-2 gap-4">
+            {contactTypes.map(ct => (
+              <div class="bg-sage-lighter rounded-xl p-6">
+                <span class="text-sage font-display text-2xl font-bold">{ct.icon}</span>
+                <p class="font-medium text-charcoal mt-3">{ct.title}</p>
+                <p class="text-charcoal-light text-sm mt-1">{ct.subtitle}</p>
+              </div>
+            ))}
           </div>
-
-          <div class="mt-10 pt-8 border-t border-warm-gray-dark">
+          <div class="mt-8 space-y-3">
             <p class="text-sm text-charcoal-light">
               <strong class="text-charcoal">Email:</strong>
-              <a href="mailto:hello@edwinaclark.com" class="text-sage hover:text-sage-dark transition-colors">hello@edwinaclark.com</a>
+              <a href="mailto:hello@edwinaclark.com" class="text-sage hover:text-sage-dark transition-colors ml-1">hello@edwinaclark.com</a>
             </p>
-            <p class="text-sm text-charcoal-light mt-2">
+            <p class="text-sm text-charcoal-light">
               <strong class="text-charcoal">LinkedIn:</strong>
-              <a href="https://www.linkedin.com/in/edwinaclark/" target="_blank" rel="noopener" class="text-sage hover:text-sage-dark transition-colors">linkedin.com/in/edwinaclark</a>
+              <a href="https://www.linkedin.com/in/edwinaclark/" target="_blank" rel="noopener" class="text-sage hover:text-sage-dark transition-colors ml-1">linkedin.com/in/edwinaclark</a>
             </p>
           </div>
         </div>
 
         <!-- Form -->
-        <div class="bg-sage-lighter p-8 md:p-10 rounded-sm">
-          <form name="contact" method="POST" data-netlify="true" class="space-y-6">
+        <div class="bg-blush-light rounded-2xl p-8 md:p-10">
+          <form name="contact" method="POST" data-netlify="true" class="space-y-5">
             <input type="hidden" name="form-name" value="contact" />
             <div>
               <label for="name" class="block text-sm font-medium text-charcoal mb-2">Name</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                required
-                class="w-full px-4 py-3 bg-white border border-sage-light/50 text-charcoal text-sm focus:outline-none focus:border-sage transition-colors"
-              />
+              <input type="text" id="name" name="name" required
+                class="w-full px-5 py-3.5 bg-white border border-sage-light/30 rounded-lg text-charcoal text-sm focus:outline-none focus:border-sage transition-colors" />
             </div>
             <div>
               <label for="email" class="block text-sm font-medium text-charcoal mb-2">Email</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                required
-                class="w-full px-4 py-3 bg-white border border-sage-light/50 text-charcoal text-sm focus:outline-none focus:border-sage transition-colors"
-              />
+              <input type="email" id="email" name="email" required
+                class="w-full px-5 py-3.5 bg-white border border-sage-light/30 rounded-lg text-charcoal text-sm focus:outline-none focus:border-sage transition-colors" />
             </div>
             <div>
               <label for="type" class="block text-sm font-medium text-charcoal mb-2">I'm reaching out about</label>
-              <select
-                id="type"
-                name="type"
-                class="w-full px-4 py-3 bg-white border border-sage-light/50 text-charcoal text-sm focus:outline-none focus:border-sage transition-colors"
-              >
+              <select id="type" name="type"
+                class="w-full px-5 py-3.5 bg-white border border-sage-light/30 rounded-lg text-charcoal text-sm focus:outline-none focus:border-sage transition-colors">
                 <option value="">Select one...</option>
                 <option value="cmo">Fractional CMO / marketing advisory</option>
                 <option value="writing">Writing or content project</option>
@@ -92,18 +83,11 @@ import Footer from '../components/Footer.astro';
             </div>
             <div>
               <label for="message" class="block text-sm font-medium text-charcoal mb-2">Message</label>
-              <textarea
-                id="message"
-                name="message"
-                rows="5"
-                required
-                class="w-full px-4 py-3 bg-white border border-sage-light/50 text-charcoal text-sm focus:outline-none focus:border-sage transition-colors resize-none"
-              ></textarea>
+              <textarea id="message" name="message" rows="5" required
+                class="w-full px-5 py-3.5 bg-white border border-sage-light/30 rounded-lg text-charcoal text-sm focus:outline-none focus:border-sage transition-colors resize-none"></textarea>
             </div>
-            <button
-              type="submit"
-              class="w-full bg-sage text-white px-6 py-4 text-sm font-medium uppercase tracking-wide hover:bg-sage-dark transition-colors"
-            >
+            <button type="submit"
+              class="w-full bg-sage text-white px-6 py-4 text-sm tracking-wider uppercase rounded-full hover:bg-sage-dark transition-colors font-medium">
               Send Message
             </button>
           </form>

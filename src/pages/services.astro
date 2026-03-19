@@ -4,110 +4,80 @@ import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 
 const cmoServices = [
-  {
-    title: 'Brand Positioning & Strategy',
-    description: 'Define your brand voice, messaging framework, and competitive positioning. Especially effective for health/wellness brands that need to balance clinical credibility with consumer appeal.',
-  },
-  {
-    title: 'Content & SEO Strategy',
-    description: 'Build organic traffic engines with evidence-based content programs. I\'ve taken brands from 0 to 160K monthly organic sessions through strategic, science-backed SEO content.',
-  },
-  {
-    title: 'Go-to-Market & Launch',
-    description: 'Product positioning, launch playbooks, B2B and B2C communications, and lead generation assets for digital health products entering new markets.',
-  },
-  {
-    title: 'Team Building & Leadership',
-    description: 'Hire, mentor, and manage marketing teams. Scale from founder-led marketing to a structured function with clear KPIs and workflows.',
-  },
+  { title: 'Brand Positioning & Strategy', description: 'Define your brand voice, messaging framework, and competitive positioning — balancing clinical credibility with consumer appeal.' },
+  { title: 'Content & SEO Strategy', description: 'Build organic traffic engines with evidence-based content programs. I\'ve taken brands from 0 to 160K monthly organic sessions.' },
+  { title: 'Go-to-Market & Launch', description: 'Product positioning, launch playbooks, B2B and B2C communications for digital health products entering new markets.' },
+  { title: 'Team Building & Leadership', description: 'Hire, mentor, and manage marketing teams. Scale from founder-led marketing to a structured function with clear KPIs.' },
 ];
 
 const writingServices = [
-  {
-    title: 'Bylined Articles',
-    description: 'Expert health and nutrition articles for consumer publications, brand blogs, and digital platforms. Published in Shape, SELF, Well+Good, Yahoo Life, and more.',
-  },
-  {
-    title: 'SEO & Educational Content',
-    description: 'Evidence-based, search-optimized health content that drives organic traffic while maintaining clinical accuracy. 50+ pages built for Rousselot\'s consumer collagen platform.',
-  },
-  {
-    title: 'Media & Spokesperson',
-    description: 'Expert source for journalists on deadline. 120+ media features across SELF, Women\'s Health, Teen Vogue, Glamour, Food Network, and Condé Nast Traveler.',
-  },
-  {
-    title: 'Speaking & Events',
-    description: 'Conference talks, panels, and trade show representation at the intersection of nutrition science, digital health, and marketing. Past stages include Girl Geek X and FNCE.',
-  },
+  { title: 'Bylined Articles', description: 'Expert health and nutrition articles for consumer publications, brand blogs, and digital platforms.' },
+  { title: 'SEO & Educational Content', description: 'Evidence-based, search-optimized health content that drives traffic while maintaining clinical accuracy.' },
+  { title: 'Media & Spokesperson', description: 'Expert source for journalists on deadline. 120+ media features across national publications.' },
+  { title: 'Speaking & Events', description: 'Conference talks, panels, and trade show representation. Past stages include Girl Geek X and FNCE.' },
 ];
 
 const caseStudies = [
   {
-    client: 'Elo Health',
-    role: 'Director of Marketing',
-    results: [
-      'Scaled organic traffic from 0 to 160K monthly sessions',
-      'Built 50K-subscriber newsletter from scratch',
-      'Hired and managed a team of 5',
-      'Led content, SEO, email, and brand strategy',
-    ],
+    client: 'Elo Health', role: 'Director of Marketing', color: 'bg-sage-lighter',
+    results: ['Scaled organic traffic from 0 to 160K monthly sessions', 'Built 50K-subscriber newsletter from scratch', 'Hired and managed a team of 5', 'Led content, SEO, email, and brand strategy'],
   },
   {
-    client: 'Jona',
-    role: 'Interim Head of Marketing',
-    results: [
-      'Led marketing for microbiome health startup',
-      'Developed brand positioning and growth strategy',
-      'Built content pipeline and marketing operations',
-    ],
+    client: 'Jona', role: 'Interim Head of Marketing', color: 'bg-blush',
+    results: ['Led marketing for microbiome health startup', 'Developed brand positioning and growth strategy', 'Built content pipeline and marketing operations'],
   },
   {
-    client: 'OTO Health',
-    role: 'Fractional CMO',
-    results: [
-      'Positioned fertility wearable + app for market entry',
-      'Created brand playbook and messaging framework',
-      'Developed B2B and B2C communications strategy',
-    ],
+    client: 'OTO Health', role: 'Fractional CMO', color: 'bg-peach',
+    results: ['Positioned fertility wearable + app for market entry', 'Created brand playbook and messaging framework', 'Developed B2B and B2C communications strategy'],
   },
   {
-    client: 'Rousselot',
-    role: 'Content Strategy',
-    results: [
-      'Built consumer-facing collagen education platform',
-      '50+ SEO-optimized pages of clinical-grade content',
-      'Bridged B2B ingredient brand to consumer audience',
-    ],
+    client: 'Rousselot', role: 'Content Strategy', color: 'bg-sage-lighter',
+    results: ['Built consumer-facing collagen education platform', '50+ SEO-optimized pages of clinical-grade content', 'Bridged B2B ingredient brand to consumer audience'],
   },
+];
+
+const faqs = [
+  { q: 'What does a fractional CMO engagement look like?', a: 'I typically work 2–4 days per week, embedded with your team. Engagements start with a brand and marketing audit, then move into strategy development and execution. Most clients work with me for 6–12 months.' },
+  { q: 'What types of companies do you work with?', a: 'Digital health, nutrition, wellness, and supplement companies — typically Series A through C startups that need experienced marketing leadership without a full-time executive hire.' },
+  { q: 'Do you write content for brands or just publications?', a: 'Both. I write bylined articles for consumer publications (Shape, SELF, Well+Good) and also create brand content including SEO pages, educational articles, email campaigns, and thought leadership.' },
+  { q: 'Are you available for media commentary on deadline?', a: 'Yes. I\'m experienced with newsroom timelines and can provide clear, quotable, evidence-based commentary for print, digital, broadcast, and podcast. Include your outlet, topic, and deadline when reaching out.' },
+  { q: 'What makes you different from other fractional CMOs?', a: 'I\'m a registered dietitian (MS, RD, CSSD) with deep clinical expertise in health and nutrition. This means I can evaluate scientific claims, create clinically credible content, and position your brand with the authority that health consumers and practitioners trust.' },
 ];
 ---
 
 <Layout title="Services — Edwina Clark">
   <Nav />
 
-  <section class="pt-32 pb-12 md:pt-44 md:pb-16">
-    <div class="max-w-6xl mx-auto px-6">
-      <p class="text-sm uppercase tracking-widest text-sage mb-2">Services</p>
-      <h1 class="font-display text-4xl md:text-5xl font-bold mb-4">How I help health brands grow</h1>
-      <p class="text-lg text-charcoal-light max-w-2xl leading-relaxed">
-        I combine 10+ years of clinical nutrition expertise with hands-on marketing leadership to help digital health, nutrition, and wellness companies build trust and scale.
+  <!-- Hero -->
+  <section class="pt-24 md:pt-32 bg-sage-lighter">
+    <div class="max-w-7xl mx-auto px-6 pt-16 pb-20 md:pt-24 md:pb-28">
+      <p class="text-xs uppercase tracking-[0.2em] text-sage mb-4">Services</p>
+      <h1 class="font-display text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] mb-6 max-w-4xl">
+        How I help health brands <em class="text-sage">grow.</em>
+      </h1>
+      <p class="text-xl text-charcoal-light max-w-2xl leading-relaxed">
+        Clinical nutrition expertise + hands-on marketing leadership. A rare combination for digital health, nutrition, and wellness companies ready to scale.
       </p>
     </div>
   </section>
 
   <!-- Fractional CMO -->
-  <section class="py-20 bg-sage-lighter">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="mb-12">
-        <p class="text-sm uppercase tracking-widest text-sage mb-2">Marketing Leadership</p>
-        <h2 class="font-display text-3xl md:text-4xl font-semibold">Fractional CMO</h2>
-        <p class="text-charcoal-light mt-4 max-w-2xl leading-relaxed">
-          Embedded marketing leadership for health and wellness startups — without the full-time executive hire. I work as an extension of your team, typically 2–4 days per week.
-        </p>
+  <section class="py-24 md:py-32">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-16 items-start mb-16">
+        <div>
+          <p class="text-xs uppercase tracking-[0.2em] text-sage mb-4">Marketing Leadership</p>
+          <h2 class="font-display text-4xl md:text-5xl font-bold leading-tight">Fractional CMO</h2>
+        </div>
+        <div>
+          <p class="text-charcoal-light leading-relaxed text-lg">
+            Embedded marketing leadership for health and wellness startups — without the full-time executive hire. I work as an extension of your team, typically 2–4 days per week.
+          </p>
+        </div>
       </div>
-      <div class="grid md:grid-cols-2 gap-8">
+      <div class="grid md:grid-cols-2 gap-6">
         {cmoServices.map(service => (
-          <div class="bg-white p-8 rounded-sm">
+          <div class="bg-sage-lighter rounded-2xl p-8 md:p-10">
             <h3 class="font-display text-xl font-semibold mb-3">{service.title}</h3>
             <p class="text-charcoal-light text-sm leading-relaxed">{service.description}</p>
           </div>
@@ -116,19 +86,23 @@ const caseStudies = [
     </div>
   </section>
 
-  <!-- Writing & Media -->
-  <section class="py-20">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="mb-12">
-        <p class="text-sm uppercase tracking-widest text-sage mb-2">Content & Communications</p>
-        <h2 class="font-display text-3xl md:text-4xl font-semibold">Writing, Media & Speaking</h2>
-        <p class="text-charcoal-light mt-4 max-w-2xl leading-relaxed">
-          Health and nutrition content that builds authority — whether you need a writer, an expert source, or a speaker for your next event.
-        </p>
+  <!-- Writing & Media Services -->
+  <section class="py-24 md:py-32 bg-blush-light">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-16 items-start mb-16">
+        <div>
+          <p class="text-xs uppercase tracking-[0.2em] text-sage mb-4">Content & Communications</p>
+          <h2 class="font-display text-4xl md:text-5xl font-bold leading-tight">Writing, Media <em class="text-sage">& Speaking</em></h2>
+        </div>
+        <div>
+          <p class="text-charcoal-light leading-relaxed text-lg">
+            Health and nutrition content that builds authority — whether you need a writer, an expert source, or a speaker for your next event.
+          </p>
+        </div>
       </div>
-      <div class="grid md:grid-cols-2 gap-8">
+      <div class="grid md:grid-cols-2 gap-6">
         {writingServices.map(service => (
-          <div class="bg-sage-lighter p-8 rounded-sm">
+          <div class="bg-white rounded-2xl p-8 md:p-10">
             <h3 class="font-display text-xl font-semibold mb-3">{service.title}</h3>
             <p class="text-charcoal-light text-sm leading-relaxed">{service.description}</p>
           </div>
@@ -138,23 +112,21 @@ const caseStudies = [
   </section>
 
   <!-- Case Studies -->
-  <section class="py-20 bg-charcoal text-white">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="mb-12">
-        <p class="text-sm uppercase tracking-widest text-sage-light mb-2">Selected Work</p>
-        <h2 class="font-display text-3xl md:text-4xl font-semibold">Client results</h2>
-      </div>
-      <div class="grid md:grid-cols-2 gap-8">
+  <section class="py-24 md:py-32 bg-charcoal text-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <p class="text-xs uppercase tracking-[0.2em] text-sage-light mb-4">Selected Work</p>
+      <h2 class="font-display text-4xl md:text-5xl font-bold leading-tight mb-16">Client results</h2>
+      <div class="grid md:grid-cols-2 gap-6">
         {caseStudies.map(study => (
-          <div class="bg-white/5 p-8 rounded-sm">
-            <div class="flex items-baseline justify-between mb-4">
-              <h3 class="font-display text-xl font-semibold text-white">{study.client}</h3>
-              <span class="text-xs uppercase tracking-wide text-sage-light">{study.role}</span>
+          <div class="bg-white/5 rounded-2xl p-8 md:p-10">
+            <div class="flex items-baseline justify-between mb-6">
+              <h3 class="font-display text-2xl font-bold text-white">{study.client}</h3>
+              <span class="text-xs uppercase tracking-wider text-sage-light bg-sage-light/10 px-4 py-1.5 rounded-full">{study.role}</span>
             </div>
-            <ul class="space-y-2">
+            <ul class="space-y-3">
               {study.results.map(result => (
-                <li class="flex items-start gap-3 text-white/70 text-sm">
-                  <span class="text-sage-light mt-0.5">&#10003;</span>
+                <li class="flex items-start gap-3 text-white/70 text-sm leading-relaxed">
+                  <span class="text-sage-light mt-0.5 flex-shrink-0">&#10003;</span>
                   {result}
                 </li>
               ))}
@@ -165,47 +137,88 @@ const caseStudies = [
     </div>
   </section>
 
-  <!-- Ideal Client -->
-  <section class="py-20">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="grid md:grid-cols-2 gap-16 items-center">
-        <div>
-          <p class="text-sm uppercase tracking-widest text-sage mb-2">Best Fit</p>
-          <h2 class="font-display text-3xl font-semibold mb-6">Who I work with</h2>
-          <ul class="space-y-4 text-charcoal-light">
-            <li class="flex items-start gap-3">
-              <span class="text-sage mt-0.5">&#10003;</span>
-              <span>Digital health and wellness <strong class="text-charcoal">startups (Series A–C)</strong> that need marketing leadership without a full-time CMO hire</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="text-sage mt-0.5">&#10003;</span>
-              <span>Health, nutrition, and supplement brands that need <strong class="text-charcoal">clinically credible content</strong> to build trust</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="text-sage mt-0.5">&#10003;</span>
-              <span>Publications and media outlets looking for a <strong class="text-charcoal">reliable nutrition expert</strong> who can write or comment on deadline</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="text-sage mt-0.5">&#10003;</span>
-              <span>Companies seeking a <strong class="text-charcoal">speaker</strong> at the intersection of nutrition science, digital health, and marketing</span>
-            </li>
-          </ul>
+  <!-- Ideal Client + Image -->
+  <section class="py-24 md:py-32">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-5 gap-8 items-center">
+        <div class="md:col-span-3">
+          <p class="text-xs uppercase tracking-[0.2em] text-sage mb-4">Best Fit</p>
+          <h2 class="font-display text-4xl md:text-5xl font-bold leading-tight mb-10">Who I work with</h2>
+          <div class="space-y-5">
+            <div class="flex items-start gap-4">
+              <span class="bg-sage-lighter text-sage w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 text-sm font-semibold">1</span>
+              <div>
+                <p class="font-medium text-charcoal">Digital health startups (Series A–C)</p>
+                <p class="text-charcoal-light text-sm mt-1">Need marketing leadership without a full-time CMO hire</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <span class="bg-blush text-sage w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 text-sm font-semibold">2</span>
+              <div>
+                <p class="font-medium text-charcoal">Health, nutrition & supplement brands</p>
+                <p class="text-charcoal-light text-sm mt-1">Need clinically credible content to build trust and authority</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <span class="bg-peach text-sage-dark w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 text-sm font-semibold">3</span>
+              <div>
+                <p class="font-medium text-charcoal">Publications & media outlets</p>
+                <p class="text-charcoal-light text-sm mt-1">Looking for a reliable nutrition expert who writes or comments on deadline</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <span class="bg-sage-lighter text-sage w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 text-sm font-semibold">4</span>
+              <div>
+                <p class="font-medium text-charcoal">Event organizers</p>
+                <p class="text-charcoal-light text-sm mt-1">Seeking a speaker at the intersection of nutrition, health, and marketing</p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="aspect-[4/3] rounded-sm overflow-hidden">
+        <div class="md:col-span-2 aspect-[3/4] rounded-2xl overflow-hidden">
           <img src="/images/headshot-cooking.jpg" alt="Edwina Clark" class="w-full h-full object-cover" />
         </div>
       </div>
     </div>
   </section>
 
+  <!-- FAQ Accordion -->
+  <section class="py-24 md:py-32 bg-sage-lighter">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-16">
+        <div>
+          <p class="text-xs uppercase tracking-[0.2em] text-sage mb-4">FAQ</p>
+          <h2 class="font-display text-4xl md:text-5xl font-bold leading-tight">
+            Answers to commonly asked questions
+          </h2>
+        </div>
+        <div class="space-y-4">
+          {faqs.map(faq => (
+            <details class="bg-white rounded-xl overflow-hidden group">
+              <summary class="px-6 py-5 flex items-center justify-between gap-4">
+                <span class="font-medium text-charcoal">{faq.q}</span>
+                <span class="faq-icon text-sage text-2xl leading-none transition-transform flex-shrink-0">+</span>
+              </summary>
+              <div class="px-6 pb-5 text-charcoal-light text-sm leading-relaxed -mt-1">
+                {faq.a}
+              </div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- CTA -->
-  <section class="py-20 bg-blush-light">
-    <div class="max-w-3xl mx-auto px-6 text-center">
-      <h2 class="font-display text-3xl md:text-4xl font-semibold mb-4">Ready to work together?</h2>
-      <p class="text-charcoal-light leading-relaxed mb-8 max-w-xl mx-auto">
-        Tell me about your brand, your goals, and the challenge you're trying to solve. I'll get back to you within 1–2 business days.
+  <section class="bg-sage py-24 md:py-32">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+        Ready to grow your<br /><em>health brand?</em>
+      </h2>
+      <p class="text-white/70 text-lg leading-relaxed mb-10 max-w-xl mx-auto">
+        Tell me about your company, your goals, and the challenge you're trying to solve.
       </p>
-      <a href="/contact" class="inline-block bg-sage text-white px-8 py-4 text-sm font-medium uppercase tracking-wide hover:bg-sage-dark transition-colors">
+      <a href="/contact" class="inline-block bg-white text-sage px-10 py-4 text-sm tracking-wider uppercase rounded-full hover:bg-sage-lighter transition-colors font-medium">
         Start a Conversation
       </a>
     </div>

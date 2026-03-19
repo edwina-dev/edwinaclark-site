@@ -2,36 +2,51 @@
 const year = new Date().getFullYear();
 ---
 
-<footer class="bg-charcoal text-white/70 py-16">
-  <div class="max-w-6xl mx-auto px-6">
-    <div class="grid md:grid-cols-3 gap-12">
-      <div>
-        <p class="font-display text-xl text-white mb-3">Edwina Clark</p>
-        <p class="text-sm leading-relaxed">
-          MS, RD, CSSD<br />
-          Fractional CMO. Health writer. Media expert.<br />
-          Science-driven wellness.
-        </p>
-      </div>
-      <div>
-        <p class="text-sm font-medium text-white uppercase tracking-wide mb-3">Navigate</p>
-        <div class="flex flex-col gap-2">
-          <a href="/services" class="text-sm hover:text-sage-light transition-colors">Services</a>
-          <a href="/writing-media" class="text-sm hover:text-sage-light transition-colors">Writing & Media</a>
-          <a href="/about" class="text-sm hover:text-sage-light transition-colors">About</a>
-          <a href="/contact" class="text-sm hover:text-sage-light transition-colors">Contact</a>
-        </div>
-      </div>
-      <div>
-        <p class="text-sm font-medium text-white uppercase tracking-wide mb-3">Connect</p>
-        <div class="flex flex-col gap-2">
-          <a href="https://www.linkedin.com/in/edwinaclark/" target="_blank" rel="noopener" class="text-sm hover:text-sage-light transition-colors">LinkedIn</a>
-          <a href="mailto:hello@edwinaclark.com" class="text-sm hover:text-sage-light transition-colors">hello@edwinaclark.com</a>
-        </div>
+<footer class="bg-charcoal text-white">
+  <!-- Tagline -->
+  <div class="py-16 px-6">
+    <div class="max-w-7xl mx-auto">
+      <img src="/images/logo.png" alt="Edwina Clark" class="h-12 w-auto brightness-0 invert mb-6" />
+      <p class="font-display text-3xl md:text-5xl leading-tight max-w-lg">
+        Science-driven wellness<br /><em>for growing brands.</em>
+      </p>
+      <div class="mt-8 flex flex-wrap gap-4">
+        <a href="/contact" class="bg-sage text-white text-sm tracking-wider uppercase px-8 py-3 rounded-full hover:bg-sage-dark transition-colors">
+          Get Started
+        </a>
+        <a href="https://www.linkedin.com/in/edwinaclark/" target="_blank" rel="noopener" class="border border-white/30 text-white text-sm tracking-wider uppercase px-8 py-3 rounded-full hover:bg-white/10 transition-colors">
+          LinkedIn
+        </a>
       </div>
     </div>
-    <div class="border-t border-white/10 mt-12 pt-8 text-center text-xs text-white/40">
-      &copy; {year} Edwina Clark. All rights reserved.
+  </div>
+
+  <!-- Newsletter -->
+  <div class="border-t border-white/10 py-12 px-6">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-start">
+      <div>
+        <p class="text-lg mb-2">Get insights delivered to your inbox.</p>
+        <p class="text-white/50 text-sm">Health marketing strategy, nutrition science, and brand-building tips.</p>
+      </div>
+      <form class="flex gap-3">
+        <input type="email" placeholder="Email address" class="flex-1 px-5 py-3 bg-white/10 border border-white/20 rounded-full text-sm text-white placeholder:text-white/40 focus:outline-none focus:border-sage" />
+        <button type="submit" class="bg-sage text-white text-sm tracking-wider uppercase px-6 py-3 rounded-full hover:bg-sage-dark transition-colors">
+          Subscribe
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Bottom -->
+  <div class="border-t border-white/10 py-8 px-6">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-xs text-white/40">&copy; {year} Edwina Clark. All rights reserved.</p>
+      <div class="flex gap-8">
+        <a href="/services" class="text-xs text-white/40 hover:text-sage-light transition-colors uppercase tracking-wider">Services</a>
+        <a href="/writing-media" class="text-xs text-white/40 hover:text-sage-light transition-colors uppercase tracking-wider">Writing & Media</a>
+        <a href="/about" class="text-xs text-white/40 hover:text-sage-light transition-colors uppercase tracking-wider">About</a>
+        <a href="/contact" class="text-xs text-white/40 hover:text-sage-light transition-colors uppercase tracking-wider">Contact</a>
+      </div>
     </div>
   </div>
 </footer>

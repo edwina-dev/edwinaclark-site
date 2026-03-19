@@ -4,60 +4,15 @@ import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 
 const articles = [
-  {
-    title: 'What a Dietitian Actually Eats in a Day',
-    outlet: 'Shape',
-    category: 'Nutrition',
-    url: '#',
-  },
-  {
-    title: 'The Science Behind Gut Health Claims',
-    outlet: 'Well+Good',
-    category: 'Gut Health',
-    url: '#',
-  },
-  {
-    title: 'Sports Nutrition Myths That Won\'t Die',
-    outlet: 'SELF',
-    category: 'Sports Nutrition',
-    url: '#',
-  },
-  {
-    title: 'Prenatal Nutrition: What the Research Really Says',
-    outlet: 'Yahoo Life',
-    category: 'Fertility',
-    url: '#',
-  },
-  {
-    title: 'Do You Actually Need a Collagen Supplement?',
-    outlet: 'Women\'s Health',
-    category: 'Supplements',
-    url: '#',
-  },
-  {
-    title: 'How Ultra-Processed Foods Affect Your Microbiome',
-    outlet: 'Well+Good',
-    category: 'Gut Health',
-    url: '#',
-  },
-  {
-    title: 'Fueling for Endurance: A Dietitian\'s Guide',
-    outlet: 'MyFitnessPal',
-    category: 'Sports Nutrition',
-    url: '#',
-  },
-  {
-    title: 'The Anti-Diet Approach to Healthy Eating',
-    outlet: 'Shape',
-    category: 'Nutrition',
-    url: '#',
-  },
-  {
-    title: 'Supplements That Are Actually Worth Taking',
-    outlet: 'SELF',
-    category: 'Supplements',
-    url: '#',
-  },
+  { title: 'What a Dietitian Actually Eats in a Day', outlet: 'Shape', category: 'Nutrition', url: '#' },
+  { title: 'The Science Behind Gut Health Claims', outlet: 'Well+Good', category: 'Gut Health', url: '#' },
+  { title: 'Sports Nutrition Myths That Won\'t Die', outlet: 'SELF', category: 'Sports Nutrition', url: '#' },
+  { title: 'Prenatal Nutrition: What the Research Really Says', outlet: 'Yahoo Life', category: 'Fertility', url: '#' },
+  { title: 'Do You Actually Need a Collagen Supplement?', outlet: 'Women\'s Health', category: 'Supplements', url: '#' },
+  { title: 'How Ultra-Processed Foods Affect Your Microbiome', outlet: 'Well+Good', category: 'Gut Health', url: '#' },
+  { title: 'Fueling for Endurance: A Dietitian\'s Guide', outlet: 'MyFitnessPal', category: 'Sports Nutrition', url: '#' },
+  { title: 'The Anti-Diet Approach to Healthy Eating', outlet: 'Shape', category: 'Nutrition', url: '#' },
+  { title: 'Supplements That Are Actually Worth Taking', outlet: 'SELF', category: 'Supplements', url: '#' },
 ];
 
 const mediaFeatures = [
@@ -75,6 +30,8 @@ const mediaFeatures = [
   { outlet: 'Women\'s Health', topic: 'Prenatal vitamin guide' },
 ];
 
+const contentCategories = ['Recipes', 'Tips', 'Research', 'Videos', 'Podcasts', 'Articles', 'Recipes', 'Tips', 'Research', 'Videos', 'Podcasts', 'Articles'];
+
 const speakingTopics = [
   'Evidence-based nutrition in the age of misinformation',
   'Building trust through science-backed health content',
@@ -82,54 +39,76 @@ const speakingTopics = [
   'Sports nutrition for the everyday athlete',
   'The intersection of digital health and nutrition science',
 ];
+
+const speakingVenues = [
+  { name: 'Girl Geek X', type: 'Conference' },
+  { name: 'FNCE', type: 'Conference' },
+  { name: 'Trade Shows', type: 'Events' },
+  { name: 'Corporate Events', type: 'Events' },
+];
 ---
 
 <Layout title="Writing & Media — Edwina Clark">
   <Nav />
 
-  <section class="pt-32 pb-12 md:pt-44 md:pb-16">
-    <div class="max-w-6xl mx-auto px-6">
-      <p class="text-sm uppercase tracking-widest text-sage mb-2">Writing & Media</p>
-      <h1 class="font-display text-4xl md:text-5xl font-bold mb-4">Expert voice in health & nutrition</h1>
-      <p class="text-lg text-charcoal-light max-w-2xl leading-relaxed">
-        Bylined articles for top publications, expert commentary for national media, and speaking at industry events — all grounded in clinical nutrition expertise and a decade of health communications.
+  <!-- Hero -->
+  <section class="pt-24 md:pt-32 bg-blush">
+    <div class="max-w-7xl mx-auto px-6 pt-16 pb-20 md:pt-24 md:pb-28">
+      <p class="text-xs uppercase tracking-[0.2em] text-sage mb-4">Writing & Media</p>
+      <h1 class="font-display text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] mb-6 max-w-4xl">
+        Expert voice in health <em class="text-sage">& nutrition.</em>
+      </h1>
+      <p class="text-xl text-charcoal-light max-w-2xl leading-relaxed">
+        Bylined articles for top publications, expert commentary for national media, and speaking at industry events — grounded in clinical expertise.
       </p>
     </div>
   </section>
 
-  <!-- Stats bar -->
-  <section class="py-10 bg-sage-lighter">
-    <div class="max-w-6xl mx-auto px-6">
+  <!-- Stats -->
+  <section class="py-12 bg-white border-b border-sage-lighter">
+    <div class="max-w-7xl mx-auto px-6">
       <div class="grid grid-cols-3 gap-8 text-center">
         <div>
-          <p class="font-display text-3xl md:text-4xl font-bold text-sage">120+</p>
+          <p class="font-display text-4xl md:text-5xl font-bold text-sage">120+</p>
           <p class="text-sm text-charcoal-light mt-1">Media Features</p>
         </div>
         <div>
-          <p class="font-display text-3xl md:text-4xl font-bold text-sage">50+</p>
+          <p class="font-display text-4xl md:text-5xl font-bold text-sage">50+</p>
           <p class="text-sm text-charcoal-light mt-1">Publications</p>
         </div>
         <div>
-          <p class="font-display text-3xl md:text-4xl font-bold text-sage">6+</p>
+          <p class="font-display text-4xl md:text-5xl font-bold text-sage">6+</p>
           <p class="text-sm text-charcoal-light mt-1">Topic Areas</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Writing -->
-  <section class="py-20">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="mb-12">
-        <p class="text-sm uppercase tracking-widest text-sage mb-2">Bylined Work</p>
-        <h2 class="font-display text-3xl md:text-4xl font-semibold">Writing</h2>
-      </div>
-      <div class="grid md:grid-cols-3 gap-6">
-        {articles.map(article => (
-          <a href={article.url} class="group block p-6 bg-sage-lighter/50 rounded-sm hover:bg-sage-lighter transition-colors">
-            <span class="text-xs uppercase tracking-widest text-sage">{article.outlet}</span>
-            <h3 class="font-display text-lg font-semibold mt-2 mb-2 group-hover:text-sage transition-colors">{article.title}</h3>
-            <span class="text-xs uppercase tracking-wide text-charcoal-light/60">{article.category}</span>
+  <!-- Content Category Marquee -->
+  <section class="bg-sage py-4 overflow-hidden">
+    <div class="flex whitespace-nowrap marquee-track">
+      {contentCategories.map(cat => (
+        <span class="font-display text-2xl md:text-3xl italic text-white/80 mx-6 flex items-center gap-6">
+          {cat} <span class="text-sage-light">&middot;</span>
+        </span>
+      ))}
+    </div>
+  </section>
+
+  <!-- Writing Portfolio -->
+  <section class="py-24 md:py-32">
+    <div class="max-w-7xl mx-auto px-6">
+      <p class="text-xs uppercase tracking-[0.2em] text-sage mb-4">Bylined Work</p>
+      <h2 class="font-display text-4xl md:text-5xl font-bold leading-tight mb-16">Writing</h2>
+      <div class="grid md:grid-cols-3 gap-5">
+        {articles.map((article, i) => (
+          <a href={article.url} class:list={[
+            'group block rounded-2xl p-7 transition-colors',
+            i % 3 === 0 ? 'bg-sage-lighter hover:bg-sage-light/40' : i % 3 === 1 ? 'bg-blush-light hover:bg-blush/60' : 'bg-peach/60 hover:bg-peach'
+          ]}>
+            <span class="text-xs uppercase tracking-[0.2em] text-sage">{article.outlet}</span>
+            <h3 class="font-display text-xl font-semibold mt-3 mb-3 group-hover:text-sage transition-colors">{article.title}</h3>
+            <span class="text-xs uppercase tracking-wider text-charcoal-light/60 bg-white/60 px-3 py-1 rounded-full">{article.category}</span>
           </a>
         ))}
       </div>
@@ -137,71 +116,79 @@ const speakingTopics = [
   </section>
 
   <!-- Media Features -->
-  <section class="py-20 bg-warm-gray">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="mb-12">
-        <p class="text-sm uppercase tracking-widest text-sage mb-2">Expert Source</p>
-        <h2 class="font-display text-3xl md:text-4xl font-semibold">Media Features</h2>
-        <p class="text-charcoal-light mt-4 max-w-2xl leading-relaxed">
-          Trusted by journalists across national publications for clear, evidence-based nutrition commentary. Available on tight deadlines for print, digital, broadcast, and podcast.
-        </p>
-      </div>
-      <div class="divide-y divide-warm-gray-dark">
-        {mediaFeatures.map(feature => (
-          <div class="py-4 grid grid-cols-12 gap-4 items-center">
-            <div class="col-span-4 md:col-span-3">
-              <span class="font-display text-lg italic text-charcoal">{feature.outlet}</span>
+  <section class="py-24 md:py-32 bg-sage-lighter">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-16 items-start">
+        <div class="md:sticky md:top-28">
+          <p class="text-xs uppercase tracking-[0.2em] text-sage mb-4">Expert Source</p>
+          <h2 class="font-display text-4xl md:text-5xl font-bold leading-tight mb-6">
+            Media features
+          </h2>
+          <p class="text-charcoal-light leading-relaxed">
+            Trusted by journalists across national publications for clear, evidence-based nutrition commentary. Available on tight deadlines for print, digital, broadcast, and podcast.
+          </p>
+        </div>
+        <div class="divide-y divide-sage-light/50">
+          {mediaFeatures.map(feature => (
+            <div class="py-4 flex items-baseline gap-4">
+              <span class="font-display text-lg italic text-charcoal flex-shrink-0 w-36">{feature.outlet}</span>
+              <p class="text-charcoal-light text-sm">{feature.topic}</p>
             </div>
-            <div class="col-span-8 md:col-span-9">
-              <p class="text-charcoal-light text-sm md:text-base">{feature.topic}</p>
-            </div>
-          </div>
-        ))}
+          ))}
+          <p class="pt-6 text-sm text-charcoal-light italic">Full media list available on request.</p>
+        </div>
       </div>
-      <p class="text-sm text-charcoal-light mt-8 italic">Showing a selection — full media list available on request.</p>
     </div>
   </section>
 
   <!-- Speaking -->
-  <section class="py-20 bg-charcoal text-white">
-    <div class="max-w-6xl mx-auto px-6">
+  <section class="py-24 md:py-32 bg-charcoal text-white">
+    <div class="max-w-7xl mx-auto px-6">
       <div class="grid md:grid-cols-2 gap-16">
         <div>
-          <p class="text-sm uppercase tracking-widest text-sage-light mb-2">Speaking</p>
-          <h2 class="font-display text-3xl font-semibold mb-6">Conference & Event Speaker</h2>
-          <p class="text-white/70 leading-relaxed mb-6">
-            I speak at industry conferences, corporate events, and trade shows on topics at the intersection of nutrition science, digital health, and content strategy. Past stages include Girl Geek X and FNCE.
-          </p>
-          <a href="/contact" class="inline-block border border-sage-light text-sage-light px-6 py-3 text-sm font-medium uppercase tracking-wide hover:bg-sage-light hover:text-charcoal transition-colors">
-            Book Me to Speak
-          </a>
+          <p class="text-xs uppercase tracking-[0.2em] text-sage-light mb-4">Speaking</p>
+          <h2 class="font-display text-4xl md:text-5xl font-bold leading-tight mb-8">
+            Edwina has spoken for groups such as
+          </h2>
+          <div class="grid grid-cols-2 gap-4">
+            {speakingVenues.map(venue => (
+              <div class="bg-white/5 rounded-xl p-5">
+                <p class="font-medium text-white">{venue.name}</p>
+                <p class="text-white/40 text-sm mt-1">{venue.type}</p>
+              </div>
+            ))}
+          </div>
         </div>
         <div>
-          <p class="text-sm uppercase tracking-widest text-white/40 mb-4">Sample Topics</p>
-          <ul class="space-y-4">
+          <p class="text-xs uppercase tracking-[0.2em] text-white/40 mb-6">On topics like</p>
+          <div class="flex flex-wrap gap-3">
             {speakingTopics.map(topic => (
-              <li class="flex items-start gap-3 text-white/70">
-                <span class="text-sage-light mt-1 text-lg leading-none">&bull;</span>
+              <span class="bg-white/10 text-white/80 px-5 py-2.5 rounded-full text-sm">
                 {topic}
-              </li>
+              </span>
             ))}
-          </ul>
+          </div>
+          <div class="mt-12">
+            <a href="/contact" class="inline-block border-2 border-sage-light text-sage-light px-8 py-3.5 text-sm tracking-wider uppercase rounded-full hover:bg-sage-light hover:text-charcoal transition-colors">
+              Book Me to Speak
+            </a>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- For Journalists CTA -->
-  <section class="py-20 bg-blush-light">
-    <div class="max-w-3xl mx-auto px-6 text-center">
-      <h2 class="font-display text-2xl md:text-3xl font-semibold mb-4">For Journalists & Producers</h2>
-      <p class="text-charcoal-light leading-relaxed mb-4">
-        I'm available for expert commentary on nutrition, gut health, sports nutrition, fertility, supplements, and wellness trends. I work on tight deadlines and provide clear, quotable insights backed by current research.
+  <section class="py-24 md:py-32 bg-peach">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="font-display text-4xl md:text-5xl font-bold leading-tight mb-4">For Journalists & Producers</h2>
+      <p class="text-charcoal-light leading-relaxed mb-4 text-lg max-w-2xl mx-auto">
+        Available for expert commentary on nutrition, gut health, sports nutrition, fertility, supplements, and wellness trends.
       </p>
-      <p class="text-charcoal-light leading-relaxed mb-8">
+      <p class="text-charcoal-light leading-relaxed mb-10">
         <strong class="text-charcoal">Credentials:</strong> MS Nutrition (Boston University, summa cum laude), RD, CSSD
       </p>
-      <a href="/contact" class="inline-block bg-sage text-white px-8 py-4 text-sm font-medium uppercase tracking-wide hover:bg-sage-dark transition-colors">
+      <a href="/contact" class="inline-block bg-sage text-white px-10 py-4 text-sm tracking-wider uppercase rounded-full hover:bg-sage-dark transition-colors">
         Request an Interview
       </a>
     </div>
