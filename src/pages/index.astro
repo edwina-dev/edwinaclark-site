@@ -3,7 +3,18 @@ import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 
-const mediaOutlets = ['SELF', 'Women\'s Health', 'Shape', 'Teen Vogue', 'Glamour', 'Condé Nast Traveler', 'Food Network', 'Yahoo Life', 'Well+Good', 'Forbes'];
+const mediaLogos = [
+  { name: 'SELF', src: '/images/logos/self.svg' },
+  { name: 'Women\'s Health', src: '/images/logos/womens-health.svg' },
+  { name: 'Shape', src: '/images/logos/shape.svg' },
+  { name: 'Teen Vogue', src: '/images/logos/teen-vogue.svg' },
+  { name: 'Glamour', src: '/images/logos/glamour.svg' },
+  { name: 'Condé Nast Traveler', src: '/images/logos/cntraveler.svg' },
+  { name: 'Food Network', src: '/images/logos/food-network.svg' },
+  { name: 'Yahoo Life', src: '/images/logos/yahoo-life.svg' },
+  { name: 'Well+Good', src: '/images/logos/wellgood.svg' },
+  { name: 'MyFitnessPal', src: '/images/logos/myfitnesspal.svg' },
+];
 
 const marqueeItems = ['Brand Strategy', 'SEO & Content', 'Nutrition Writing', 'Media Expert', 'Recipe Development', 'Fractional CMO', 'TV Segments', 'Digital Health', 'Brand Strategy', 'SEO & Content', 'Nutrition Writing', 'Media Expert', 'Recipe Development', 'Fractional CMO', 'TV Segments', 'Digital Health'];
 
@@ -78,10 +89,10 @@ const expertiseAreas = [
   <!-- Media Logos -->
   <section class="py-14 border-b border-sage-lighter">
     <div class="max-w-7xl mx-auto px-6">
-      <p class="text-center text-xs uppercase tracking-[0.2em] text-charcoal-light/60 mb-8">Featured in 120+ publications including</p>
-      <div class="flex flex-wrap justify-center items-center gap-x-10 gap-y-3">
-        {mediaOutlets.map(outlet => (
-          <span class="font-display text-lg md:text-xl text-charcoal/40 italic">{outlet}</span>
+      <p class="text-center text-xs uppercase tracking-[0.2em] text-charcoal-light/60 mb-10">Featured in 130+ publications including</p>
+      <div class="flex flex-wrap justify-center items-center gap-x-12 gap-y-6">
+        {mediaLogos.map(logo => (
+          <img src={logo.src} alt={logo.name} class="h-8 md:h-10 w-auto opacity-50 hover:opacity-80 transition-opacity" />
         ))}
       </div>
     </div>
