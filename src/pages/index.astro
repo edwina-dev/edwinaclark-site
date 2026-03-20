@@ -5,12 +5,12 @@ import Footer from '../components/Footer.astro';
 
 const mediaOutlets = ['SELF', 'Women\'s Health', 'Shape', 'Teen Vogue', 'Glamour', 'Condé Nast Traveler', 'Food Network', 'Yahoo Life', 'Well+Good', 'Forbes'];
 
-const marqueeItems = ['Brand Strategy', 'SEO & Content', 'Nutrition Writing', 'Media Expert', 'Speaking', 'Fractional CMO', 'Health & Wellness', 'Digital Health', 'Brand Strategy', 'SEO & Content', 'Nutrition Writing', 'Media Expert', 'Speaking', 'Fractional CMO', 'Health & Wellness', 'Digital Health'];
+const marqueeItems = ['Brand Strategy', 'SEO & Content', 'Nutrition Writing', 'Media Expert', 'Recipe Development', 'Fractional CMO', 'TV Segments', 'Digital Health', 'Brand Strategy', 'SEO & Content', 'Nutrition Writing', 'Media Expert', 'Recipe Development', 'Fractional CMO', 'TV Segments', 'Digital Health'];
 
 const results = [
   { metric: '0 → 160K', label: 'Monthly organic sessions at Elo Health' },
   { metric: '50K', label: 'Newsletter subscribers built from scratch' },
-  { metric: '120+', label: 'Media features across national outlets' },
+  { metric: '130+', label: 'Media features across national outlets' },
   { metric: '50+', label: 'SEO pages for Rousselot collagen platform' },
 ];
 
@@ -27,7 +27,7 @@ const expertiseAreas = [
   'Nutrition & dietetics', 'Gut health & microbiome', 'Sports nutrition',
   'Fertility & prenatal', 'Supplements & nutraceuticals', 'Digital health marketing',
   'Brand positioning', 'Content & SEO strategy', 'Health communications',
-  'Consumer wellness',
+  'Recipe development & food photography', 'TV segments & broadcast', 'Consumer wellness',
 ];
 ---
 
@@ -191,28 +191,29 @@ const expertiseAreas = [
     </div>
   </section>
 
-  <!-- Image + Text — asymmetric -->
+  <!-- Broadcast Preview -->
   <section class="py-24 md:py-32">
     <div class="max-w-7xl mx-auto px-6">
-      <div class="grid md:grid-cols-5 gap-8 items-center">
-        <div class="md:col-span-2 aspect-[4/5] rounded-2xl overflow-hidden">
-          <img src="/images/headshot-food.jpeg" alt="Edwina Clark in the kitchen" class="w-full h-full object-cover" />
-        </div>
-        <div class="md:col-span-3 md:pl-8">
-          <p class="text-xs uppercase tracking-[0.2em] text-sage mb-4">About Edwina</p>
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+        <div>
+          <p class="text-xs uppercase tracking-[0.2em] text-sage mb-4">As Seen On TV</p>
           <h2 class="font-display text-4xl md:text-5xl font-bold leading-tight mb-6">
-            Clinically trained.<br />
-            <em class="text-sage">Marketing-tested.</em>
+            Broadcast nutrition<br /><em class="text-sage">expert.</em>
           </h2>
           <p class="text-charcoal-light leading-relaxed mb-4">
-            MS, RD, CSSD — with 10+ years spanning performance nutrition at EXOS (Google, Intel, Tesla), consumer health tech at Yummly (25–30M users), and marketing leadership at Elo Health.
+            Regular nutrition expert on WTTG Fox 5 DC and trusted source for 130+ media features across SELF, Women's Health, Shape, Teen Vogue, and more.
           </p>
           <p class="text-charcoal-light leading-relaxed mb-8">
-            I understand both the science and how to communicate it in ways that resonate with real people — and drive real business results.
+            Also available for recipe development, food photography, and recipe videos — combining culinary creativity with clinical nutrition expertise.
           </p>
-          <a href="/about" class="inline-block bg-sage text-white px-8 py-3.5 text-sm tracking-wider uppercase rounded-full hover:bg-sage-dark transition-colors">
-            Full Bio
+          <a href="/writing-media" class="inline-block bg-sage text-white px-8 py-3.5 text-sm tracking-wider uppercase rounded-full hover:bg-sage-dark transition-colors">
+            Watch Clips & See Work
           </a>
+        </div>
+        <div class="aspect-video bg-charcoal rounded-2xl overflow-hidden">
+          <video class="w-full h-full object-cover" controls preload="metadata">
+            <source src="/videos/wttg-snack-hacks.mp4" type="video/mp4" />
+          </video>
         </div>
       </div>
     </div>

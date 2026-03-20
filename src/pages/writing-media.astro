@@ -30,7 +30,19 @@ const mediaFeatures = [
   { outlet: 'Women\'s Health', topic: 'Prenatal vitamin guide' },
 ];
 
-const contentCategories = ['Recipes', 'Tips', 'Research', 'Videos', 'Podcasts', 'Articles', 'Recipes', 'Tips', 'Research', 'Videos', 'Podcasts', 'Articles'];
+const broadcastClips = [
+  { title: 'Healthy Snack Hacks', show: 'WTTG Fox 5 DC', date: 'January 2026', video: '/videos/wttg-snack-hacks.mp4' },
+  { title: 'Heart-Healthy Foods', show: 'WTTG Fox 5 DC', date: 'February 2026', video: '/videos/wttg-heart-healthy.mp4' },
+  { title: 'Gut Health Essentials', show: 'WTTG Fox 5 DC', date: 'March 2026', video: '/videos/wttg-gut-health.mp4' },
+];
+
+const recipeVideos = [
+  { title: 'Sheet Pan Salmon & Veggies', video: '/videos/recipe-salmon.mp4' },
+  { title: 'Avocado Mousse', video: '/videos/recipe-avocado-mousse.mp4' },
+  { title: 'Chicken & Veggie Frittata', video: '/videos/recipe-frittata.mp4' },
+];
+
+const contentCategories = ['Recipes', 'TV Segments', 'Articles', 'Videos', 'Recipe Development', 'Food Photography', 'Recipes', 'TV Segments', 'Articles', 'Videos', 'Recipe Development', 'Food Photography'];
 
 const speakingTopics = [
   'Evidence-based nutrition in the age of misinformation',
@@ -54,12 +66,12 @@ const speakingVenues = [
   <!-- Hero -->
   <section class="pt-24 md:pt-32 bg-blush">
     <div class="max-w-7xl mx-auto px-6 pt-16 pb-20 md:pt-24 md:pb-28">
-      <p class="text-xs uppercase tracking-[0.2em] text-sage mb-4">Writing & Media</p>
+      <p class="text-xs uppercase tracking-[0.2em] text-sage mb-4">Writing, Media & Recipes</p>
       <h1 class="font-display text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] mb-6 max-w-4xl">
         Expert voice in health <em class="text-sage">& nutrition.</em>
       </h1>
       <p class="text-xl text-charcoal-light max-w-2xl leading-relaxed">
-        Bylined articles for top publications, expert commentary for national media, and speaking at industry events — grounded in clinical expertise.
+        Bylined articles, broadcast TV segments, recipe development, and expert commentary — grounded in clinical expertise and a passion for making nutrition accessible.
       </p>
     </div>
   </section>
@@ -67,10 +79,14 @@ const speakingVenues = [
   <!-- Stats -->
   <section class="py-12 bg-white border-b border-sage-lighter">
     <div class="max-w-7xl mx-auto px-6">
-      <div class="grid grid-cols-3 gap-8 text-center">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
         <div>
-          <p class="font-display text-4xl md:text-5xl font-bold text-sage">120+</p>
+          <p class="font-display text-4xl md:text-5xl font-bold text-sage">130+</p>
           <p class="text-sm text-charcoal-light mt-1">Media Features</p>
+        </div>
+        <div>
+          <p class="font-display text-4xl md:text-5xl font-bold text-sage">1B+</p>
+          <p class="text-sm text-charcoal-light mt-1">Reach in Top-Tier Publications</p>
         </div>
         <div>
           <p class="font-display text-4xl md:text-5xl font-bold text-sage">50+</p>
@@ -92,6 +108,79 @@ const speakingVenues = [
           {cat} <span class="text-sage-light">&middot;</span>
         </span>
       ))}
+    </div>
+  </section>
+
+  <!-- Broadcast Clips -->
+  <section class="py-24 md:py-32">
+    <div class="max-w-7xl mx-auto px-6">
+      <p class="text-xs uppercase tracking-[0.2em] text-sage mb-4">Broadcast</p>
+      <h2 class="font-display text-4xl md:text-5xl font-bold leading-tight mb-6">TV Segments</h2>
+      <p class="text-charcoal-light text-lg leading-relaxed mb-12 max-w-2xl">
+        Regular nutrition expert on WTTG Fox 5 DC — delivering practical, science-backed nutrition advice for live morning television.
+      </p>
+      <div class="grid md:grid-cols-3 gap-6">
+        {broadcastClips.map(clip => (
+          <div class="group">
+            <div class="aspect-video bg-charcoal rounded-2xl overflow-hidden mb-4">
+              <video
+                class="w-full h-full object-cover"
+                controls
+                preload="metadata"
+                poster=""
+              >
+                <source src={clip.video} type="video/mp4" />
+              </video>
+            </div>
+            <p class="text-xs uppercase tracking-[0.2em] text-sage">{clip.show} &middot; {clip.date}</p>
+            <h3 class="font-display text-xl font-semibold mt-2">{clip.title}</h3>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Recipe Development -->
+  <section class="py-24 md:py-32 bg-peach">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-16 items-start mb-16">
+        <div>
+          <p class="text-xs uppercase tracking-[0.2em] text-sage mb-4">Custom Content</p>
+          <h2 class="font-display text-4xl md:text-5xl font-bold leading-tight">
+            Recipe development <em class="text-sage">& food content</em>
+          </h2>
+        </div>
+        <div>
+          <p class="text-charcoal-light leading-relaxed text-lg">
+            Original recipe development, food photography, and recipe videos for brands — combining culinary creativity with nutrition expertise. Every recipe is dietitian-developed and camera-ready.
+          </p>
+        </div>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        {recipeVideos.map(recipe => (
+          <div class="group">
+            <div class="aspect-[4/5] bg-charcoal rounded-2xl overflow-hidden mb-4">
+              <video
+                class="w-full h-full object-cover"
+                controls
+                preload="metadata"
+                playsinline
+              >
+                <source src={recipe.video} type="video/mp4" />
+              </video>
+            </div>
+            <h3 class="font-display text-xl font-semibold">{recipe.title}</h3>
+            <p class="text-charcoal-light text-sm mt-1">Recipe development & video</p>
+          </div>
+        ))}
+      </div>
+      <div class="mt-12 flex flex-wrap gap-3">
+        <span class="bg-white/70 text-charcoal px-5 py-2.5 rounded-full text-sm">Recipe development</span>
+        <span class="bg-white/70 text-charcoal px-5 py-2.5 rounded-full text-sm">Food photography</span>
+        <span class="bg-white/70 text-charcoal px-5 py-2.5 rounded-full text-sm">Recipe videos</span>
+        <span class="bg-white/70 text-charcoal px-5 py-2.5 rounded-full text-sm">Nutrition analysis</span>
+        <span class="bg-white/70 text-charcoal px-5 py-2.5 rounded-full text-sm">Brand partnerships</span>
+      </div>
     </div>
   </section>
 
@@ -179,11 +268,11 @@ const speakingVenues = [
   </section>
 
   <!-- For Journalists CTA -->
-  <section class="py-24 md:py-32 bg-peach">
+  <section class="py-24 md:py-32 bg-blush">
     <div class="max-w-4xl mx-auto px-6 text-center">
       <h2 class="font-display text-4xl md:text-5xl font-bold leading-tight mb-4">For Journalists & Producers</h2>
       <p class="text-charcoal-light leading-relaxed mb-4 text-lg max-w-2xl mx-auto">
-        Available for expert commentary on nutrition, gut health, sports nutrition, fertility, supplements, and wellness trends.
+        Available for expert commentary, TV segments, and recipe demonstrations on nutrition, gut health, sports nutrition, fertility, supplements, and wellness trends.
       </p>
       <p class="text-charcoal-light leading-relaxed mb-10">
         <strong class="text-charcoal">Credentials:</strong> MS Nutrition (Boston University, summa cum laude), RD, CSSD
